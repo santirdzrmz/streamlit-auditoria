@@ -1,0 +1,270 @@
+ID,Registros,Criterio,Resultado_esperado
+A01,910005391,Buscar ID de pago en maestro,Pago sin proveedor maestro
+A02,59508890,Comparar RFC en pagos y maestro para ID existente,Un RFC discrepante sembrado
+A03,19036372,Comparar SITE por proveedor,Sitio discrepante
+A04,39018941,Comparar dígitos de las cuentas conservando ceros iniciales,Cuenta discrepante
+A05,"59601, 67131",Agrupar cuenta del maestro por IDs distintos,Dos proveedores comparten cuenta
+A06,"42488086, 55387698",Fecha de pago estrictamente posterior a la inactivación,Primer ID sin alerta y segundo ID con alerta
+A07,"96290472, 59782372",Fecha de pago estrictamente posterior a la inactivación,Primer ID sin alerta y segundo ID con alerta
+A08,"99189871, 85135529",Fecha de pago estrictamente posterior a la inactivación,Primer ID sin alerta y segundo ID con alerta
+A09,"18429202, 910005392","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Dos pagos en el mismo grupo
+A10,"77008489, 69273088",Agrupar UUID no vacíos,UUID repetido
+A11,33374660,Buscar UUID vacío,Un UUID vacío sembrado
+A12,65718973,Comparar los importes a dos decimales,Diferencia de 100.00
+A13,23277132,Pago posterior al vencimiento,Atraso presente en el original
+A14,11760881,Pago anterior a la fecha de factura,Pago anterior por un día
+A15,90605639,Buscar FALTA NC sin distinguir mayúsculas,Comentario coincidente
+A16,35097,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo deliberadamente vacío
+A17,910005393,Entre 0 y 30 días calendario después del alta,Primer pago a los 7 días
+A18,68151305,Entre 0 y 7 días calendario desde la actualización bancaria,Pago a los 3 días
+A19,"910005394, 910005395, 910005396, 910005397",Monto mayor a 3 veces la mediana de al menos 3 pagos anteriores del proveedor y sitio,8.000.000 frente a mediana de 100.000
+A20,22329,"Más del 10 % de PAGADO en toda la muestra, expresado en unidades del extracto",11.11% del total pagado al corte
+A21,12180,Proveedor activo con último pago anterior a 2024-12-01. Corte 2025-12-01,Con historial y sin pagos en los últimos 12 meses
+A21,99000002,Proveedor activo sin pagos observados al corte 2025-12-01,Sin actividad histórica
+A22,910005393,Primer pago observado superior a 500.000 en PAGADO,Primer pago de 850.000
+A23,"910005394, 910005395, 910005396, 910005397",Diciembre de 2025 supera 3 veces el promedio mensual de septiembre a noviembre por proveedor,Incremento mensual del proveedor simulado
+A24,"20MTY, 2025-12",Diciembre de 2025 supera 3 veces el promedio mensual de septiembre a noviembre por SITE,Incremento mensual del SITE
+A25,"73303489, 96254141",Más de un pago por proveedor y día,Múltiples pagos el mismo día
+A26,"910005394, 910005395","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Dos pagos comparten referencia
+A28,"910005394, 910005395, 910005396, 910005397",Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Cambian fuente y aprobación
+A29,"910005394, 910005395, 910005396, 910005397",Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Cuenta contable distinta al patrón
+A30,"910005398, 910005399","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Dos pagos por debajo de 50.000 que suman 97.500
+A01,63447510,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,67665758,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,89889471,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,84002404,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,59963123,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,52851111,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,79249401,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,97281897,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,86642234,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,85571409,Buscar ID de pago en maestro,Caso adicional de simulación
+A01,45455800,Buscar ID de pago en maestro,Caso adicional de simulación
+A02,97949006,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,81761320,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,63263073,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,22558405,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,18510354,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,82632340,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,40231749,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,68669445,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,46364033,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,17456797,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A02,98398969,Comparar RFC en pagos y maestro para ID existente,Caso adicional de simulación
+A03,75403582,Comparar SITE por proveedor,Caso adicional de simulación
+A03,12369579,Comparar SITE por proveedor,Caso adicional de simulación
+A03,34873888,Comparar SITE por proveedor,Caso adicional de simulación
+A03,76893182,Comparar SITE por proveedor,Caso adicional de simulación
+A03,86627676,Comparar SITE por proveedor,Caso adicional de simulación
+A03,61177359,Comparar SITE por proveedor,Caso adicional de simulación
+A03,35550782,Comparar SITE por proveedor,Caso adicional de simulación
+A03,62069781,Comparar SITE por proveedor,Caso adicional de simulación
+A03,72018502,Comparar SITE por proveedor,Caso adicional de simulación
+A03,31889394,Comparar SITE por proveedor,Caso adicional de simulación
+A03,84471455,Comparar SITE por proveedor,Caso adicional de simulación
+A04,72124028,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,32070845,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,40264373,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,89030102,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,51548042,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,74276871,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,10505654,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,68834352,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,69481592,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,58029562,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A04,19041687,Comparar dígitos de las cuentas conservando ceros iniciales,Caso adicional de simulación
+A05,"87508, 96952",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"36833, 78206",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"69859, 37509",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"60080, 34108",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"92749, 98957",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"67789, 52486",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"51245, 13363",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"32682, 49776",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"82866, 81447",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"87558, 94348",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A05,"48501, 37547",Agrupar cuenta del maestro por IDs distintos,Par de proveedores con una cuenta en común
+A06,"96455856, 95681874",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"27030827, 44185640",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"65184728, 40428029",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"66093533, 53787225",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"83855401, 83430462",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"59972415, 27012668",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"89379271, 24698611",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"92559487, 91636984",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"67577216, 92387923",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"51890457, 54789497",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A06,"92540041, 74185571",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"80930436, 68406048",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"41630329, 39241128",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"82608218, 10717004",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"71282664, 22770654",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"45760657, 43784160",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"70549167, 27822422",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"26591669, 78983616",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"22699684, 10583952",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"23756453, 40753411",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"43205031, 66182230",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A07,"57378077, 28218337",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"51762011, 45503589",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"65090060, 11308861",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"79702837, 47467101",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"27207626, 87626224",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"35479443, 93693044",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"55306134, 43964298",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"88208088, 19318794",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"50899077, 72123793",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"80277437, 89420511",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"13563492, 53760882",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A08,"23638858, 41329423",Fecha de pago estrictamente posterior a la inactivación,Pago antes de inactivar y pago posterior
+A09,"92221354, 90926648","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"51660086, 35197049","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"48638642, 78319646","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"45646148, 69431191","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"31155465, 13285573","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"80932955, 27318160","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"24631850, 27422296","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"20110059, 14773737","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"45751466, 96322545","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"47361953, 77980147","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A09,"78993326, 20492029","Agrupar por VENDOR_ID, NUM_FACTURA, SEGMENT1 e IMPORTE_AP",Caso adicional de simulación
+A10,"47525914, 27945309",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"66478085, 71944811",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"26365417, 82135896",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"55064038, 43552312",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"75944946, 57849443",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"82954245, 76958476",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"14016100, 88039260",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"99233564, 17355754",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"49405672, 81139219",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"84735261, 79662389",Agrupar UUID no vacíos,Caso adicional de simulación
+A10,"73639934, 23313977",Agrupar UUID no vacíos,Caso adicional de simulación
+A11,13660555,Buscar UUID vacío,Caso adicional de simulación
+A11,45480993,Buscar UUID vacío,Caso adicional de simulación
+A11,16614385,Buscar UUID vacío,Caso adicional de simulación
+A11,86863392,Buscar UUID vacío,Caso adicional de simulación
+A11,79870801,Buscar UUID vacío,Caso adicional de simulación
+A11,70133095,Buscar UUID vacío,Caso adicional de simulación
+A11,60243397,Buscar UUID vacío,Caso adicional de simulación
+A11,17668119,Buscar UUID vacío,Caso adicional de simulación
+A11,36681309,Buscar UUID vacío,Caso adicional de simulación
+A11,65881192,Buscar UUID vacío,Caso adicional de simulación
+A11,58442275,Buscar UUID vacío,Caso adicional de simulación
+A12,34635162,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,36474869,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,84151264,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,16738664,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,40265983,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,61841237,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,29621138,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,17922041,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,97068536,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,47823873,Comparar los importes a dos decimales,Caso adicional de simulación
+A12,68375118,Comparar los importes a dos decimales,Caso adicional de simulación
+A14,21459514,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,91333451,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,92199806,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,34247848,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,36206377,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,36728879,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,43582500,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,80701711,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,66792109,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,27982738,Pago anterior a la fecha de factura,Caso adicional de simulación
+A14,54987834,Pago anterior a la fecha de factura,Caso adicional de simulación
+A15,46981111,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,76464885,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,93161330,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,64187606,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,33463619,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,74757734,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,99637851,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,68053708,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,46318327,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,46826009,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A15,11557607,Buscar FALTA NC sin distinguir mayúsculas,Caso adicional de simulación
+A16,75542,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,5873,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,87074,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,66782,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,49509,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,30299,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,39542,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,77567,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,42403,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,56168,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A16,11952,"Buscar campos vacíos entre RFC, cuenta, banco, correo y teléfono",Correo del maestro vacío
+A17,17918397,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,77806907,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,67032796,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,42659942,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,97464277,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,43730822,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,35334507,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,64303142,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,26297707,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,45544123,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A17,99868202,Entre 0 y 30 días calendario después del alta,Caso adicional de simulación
+A18,20855654,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,94289491,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,97403699,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,74962442,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,76756252,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,48016974,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,21502248,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,33270778,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,95484336,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,27347725,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A18,56167356,Entre 0 y 7 días calendario desde la actualización bancaria,Caso adicional de simulación
+A25,"86505472, 63330968",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"97145758, 86635110",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"61145831, 91761583",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"81556107, 27197804",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"95944706, 63543967",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"33204014, 90758041",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"52012719, 95311085",Más de un pago por proveedor y día,Caso adicional de simulación
+A25,"95375615, 47094138",Más de un pago por proveedor y día,Caso adicional de simulación
+A26,"69074461, 43449210","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"77646528, 62865150","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"70636768, 80480119","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"48256570, 69946930","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"88571200, 67203706","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"68342267, 55078333","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"21060853, 50153405","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"34533680, 56868328","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"62202099, 24829425","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"23133117, 70252388","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A26,"27640421, 30878656","Referencia no vacía repetida en documentos y fechas distintos, caso sembrado sin lote justificado",Caso adicional de simulación
+A28,81620329,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,97996256,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,20088542,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,64378987,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,14821895,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,64144547,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,47404742,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,66476290,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,91128937,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,82525253,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A28,97555132,Fuente o aprobación diferente al patrón de al menos 3 pagos previos del proveedor,Caso adicional de simulación
+A29,53631141,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,69208077,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,77910909,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,80939601,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,19750975,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,47746283,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,46460446,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,90871625,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,86060256,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,80760099,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A29,99746769,Cuenta contable diferente de la moda de al menos 3 pagos anteriores del proveedor,Caso adicional de simulación
+A30,"79163049, 70730366","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"80847404, 72311757","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"30916104, 17425281","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"79201109, 13140223","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"93885900, 65611859","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"63304142, 17609144","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"92665164, 71947088","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"49780364, 57716859","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"32873114, 17924586","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"82024438, 70538977","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
+A30,"95368155, 39429190","Dos o más pagos del mismo proveedor en hasta 3 días, cada uno entre 90 % y menos de 100 % de 50.000 y suma mayor a 50.000",Caso adicional de simulación
